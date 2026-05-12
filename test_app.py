@@ -5,7 +5,7 @@ def test_home():
     response = client.get('/')
     assert response.status_code == 200
     data = response.get_json()
-    assert data["status"] == "running"
+    assert data["status"] == "ok"
 
 def test_health():
     client = app.app.test_client()
@@ -17,6 +17,6 @@ def test_health():
 
 def test_metrics():
     client = app.app.test_client()
-    response = client.get('/metrics')
+    response = client.get('/metric')
     assert response.status_code == 200
     assert "app_cpu_percent" in response.data.decode()
