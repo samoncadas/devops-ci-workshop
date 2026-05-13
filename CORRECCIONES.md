@@ -23,3 +23,8 @@
 - **Archivo:** docker-compose.yml
 - **Problema:** El puerto del servicios `api` estaba en 5001 en vez de 5000
 - **Solución:** Cambie `5000:5001` por `5000:5000`
+
+## Error 5
+- **Archivo:** requirements.txt
+- **Problema:** El archivo no estaba completo
+- **Solución:** Corrí el comando pip freeze > requirements.txt
