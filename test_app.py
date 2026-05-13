@@ -17,6 +17,6 @@ def test_health():
 
 def test_metrics():
     client = app.app.test_client()
-    response = client.get('/metric')
+    response = client.get('/metrics')
     assert response.status_code == 200
     assert "app_cpu_percent" in response.data.decode()
